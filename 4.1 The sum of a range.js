@@ -3,27 +3,27 @@ function range(start,end,step) {
   if(typeof(step) === 'number') {
     if(step<0) {
       for(let i=start ;i>=end ;i += step){
-          	numbers.push(i);
-    	}
-    }else {
-    	for(let i=start ;i<=end ;i += step){
-          	numbers.push(i);
-    	}
+        numbers.push(i);
     }
-    
-  }else {
+}else {
+    for(let i=start ;i<=end ;i += step){
+        numbers.push(i);
+    }
+}
+
+}else {
     for(let i=start ;i<=end ;i++){
         numbers.push(i);
-     }
-  }
-  return numbers;
+    }
+}
+return numbers;
 }
 function sum(numbers) {
   let sum =0;
   for(let i of numbers){
-  	sum+=i;
-  }
-  return sum;
+    sum+=i;
+}
+return sum;
 }
 
 console.log(range(1, 10));
