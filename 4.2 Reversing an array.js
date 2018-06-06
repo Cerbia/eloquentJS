@@ -1,17 +1,17 @@
 function reverseArray(arrayToReverse) {
     let reversedArray = [];
-        for(let i of arrayToReverse) {
-            reversedArray.unshift(i);
-        }
+    for(let i of arrayToReverse) {
+        reversedArray.unshift(i);
+    }
     return reversedArray;
 }
 function reverseArrayInPlace(arrayValue) {
-  	for(let i=0;i<=(Math.floor(arrayValue.length/2)-1);i++){
-    	let first = arrayValue[i];
+    for(let i=0;i<=(Math.floor(arrayValue.length/2)-1);i++){
+        let first = arrayValue[i];
         arrayValue[i]=arrayValue[(arrayValue.length-1)-i];
         arrayValue[(arrayValue.length-1)-i]=first;
     }
-	return arrayValue;
+    return arrayValue;
 }
 console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
